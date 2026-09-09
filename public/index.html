@@ -6,8 +6,7 @@
 <title>Anamika Yadav — Product &amp; UX Designer</title>
 <meta name="description" content="Anamika Yadav is a UI/UX designer pursuing a Master's in Human-Centered AI &amp; Experience Design, focused on research-driven, accessible product design.">
 <meta name="author" content="Anamika Yadav">
-<meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#FAF8F3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A0A0B">
 <link rel="canonical" href="https://anamika-yadav.vercel.app/">
 
 <!-- Social preview -->
@@ -58,7 +57,7 @@
 </script>
 <!-- Set theme before first paint to avoid a flash of the wrong theme -->
 <script>
-(function(){try{var t=localStorage.getItem('theme');var l=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;if((t||(l?'light':'dark'))==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+(function(){try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
 </script>
 </head>
 <body>
@@ -142,7 +141,7 @@
           <div class="photo">
             <picture>
               <source srcset="/assets/img/anamika-portrait.webp" type="image/webp">
-              <img src="/assets/img/anamika-portrait.jpg" alt="Portrait of Anamika Yadav" width="800" height="1322" loading="lazy" decoding="async" style="width:100%; height:100%; object-fit:cover;">
+              <img src="/assets/img/anamika-portrait.jpg" alt="Portrait of Anamika Yadav" width="484" height="800" loading="lazy" decoding="async">
             </picture>
           </div>
           <p class="cap">Anamika Yadav</p>
@@ -254,7 +253,7 @@
       <div class="resume-card reveal">
         <picture>
           <source srcset="/assets/img/resume-preview.webp" type="image/webp">
-          <img src="/assets/img/resume-preview.jpg" alt="Preview of Anamika Yadav's resume, page 1" width="495" height="700" loading="lazy" decoding="async" class="resume-thumb-img zoomable" data-lightbox="/assets/img/resume-preview.jpg" data-caption="Anamika Yadav — Resume">
+          <img src="/assets/img/resume-preview.jpg" alt="Preview of Anamika Yadav's resume, page 1" width="494" height="700" loading="lazy" decoding="async" class="resume-thumb-img zoomable" data-lightbox="/assets/img/resume-preview.jpg" data-caption="Anamika Yadav — Resume">
         </picture>
         <div class="resume-card-side">
           <h3>Every credential, one page.</h3>

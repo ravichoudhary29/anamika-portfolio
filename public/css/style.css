@@ -153,12 +153,14 @@
 
   .about-grid{ display:grid; grid-template-columns:0.72fr 1.28fr; gap:80px; align-items:center; }
   @media (max-width:900px){ .about-grid{ grid-template-columns:1fr; gap:44px; } }
-  .polaroid{ background:#EDEBE3; padding:16px 16px 60px; border-radius:6px; box-shadow:var(--shadow-lg); transform:rotate(-3deg); max-width:340px; margin:0 auto; transition:transform 0.5s ease, box-shadow 0.5s ease; animation:polaroidFloat 5s ease-in-out infinite; cursor:pointer; }
-  .polaroid:hover{ transform:rotate(0deg) scale(1.03) translateY(-6px); box-shadow:0 30px 70px rgba(0,0,0,0.7), 0 0 40px rgba(217,255,62,0.15); animation-play-state:paused; }
-  @keyframes polaroidFloat{ 0%,100%{ transform:rotate(-3deg) translateY(0); } 50%{ transform:rotate(-1.5deg) translateY(-8px); } }
-  .polaroid .photo{ aspect-ratio:4/4.8; border-radius:2px; background:linear-gradient(160deg,#D9DED2,#C7CBBE); display:flex; align-items:flex-end; justify-content:center; overflow:hidden; position:relative; }
-  .polaroid .photo img{ transition:transform 0.6s ease, filter 0.6s ease; }
-  .polaroid:hover .photo img{ transform:scale(1.06); filter:saturate(1.1); }
+  .polaroid{ background:#EDEBE3; padding:16px 16px 60px; border-radius:6px; box-shadow:var(--shadow-lg); transform:rotate(-3deg); max-width:340px; margin:0 auto; transition:transform 0.5s ease, box-shadow 0.5s ease; cursor:pointer; }
+  .polaroid:hover{ transform:rotate(0deg) scale(1.03) translateY(-6px); box-shadow:0 30px 70px rgba(0,0,0,0.7), 0 0 40px rgba(217,255,62,0.15); }
+  /* No fixed aspect-ratio: the frame takes the photo's own proportions, so the
+     portrait is never cropped. Works for whatever photo is dropped in. */
+  .polaroid .photo{ border-radius:2px; background:linear-gradient(160deg,#D9DED2,#C7CBBE); overflow:hidden; position:relative; }
+  .polaroid .photo picture{ display:block; }
+  .polaroid .photo img{ width:100%; height:auto; display:block; transition:transform 0.6s ease, filter 0.6s ease; }
+  .polaroid:hover .photo img{ transform:scale(1.04); filter:saturate(1.08); }
   .polaroid .photo svg{ width:60%; opacity:.6; margin-bottom:8%; }
   .polaroid .cap{ text-align:center; font-weight:700; margin-top:18px; color:#55534A; font-size:15px; }
   .about-copy p{ margin-bottom:22px; color:var(--ink-soft); font-size:17px; }
@@ -236,8 +238,12 @@
   .paper-card h3{ font-size:26px; margin-bottom:16px; font-weight:800; }
   .paper-card p{ color:var(--ink-soft); font-size:15.5px; margin-bottom:24px; }
   .paper-card .btn-row{ display:flex; gap:12px; flex-wrap:wrap; }
-  .cert-thumb{ margin-top:26px; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--line); max-width:320px; }
-  .cert-thumb img{ width:100%; display:block; }
+  .cert-thumb{ margin-top:26px; border-radius:var(--radius-md); overflow:hidden; border:1px solid var(--line); }
+  .cert-thumb picture{ display:block; }
+  /* height:auto is required: the <img> carries width/height attributes, and
+     without it the attribute height wins over the scaled width and the
+     certificate renders stretched. */
+  .cert-thumb img{ width:100%; height:auto; display:block; }
   .theme-list{ display:flex; flex-direction:column; }
   .theme-item{ display:flex; gap:18px; align-items:flex-start; padding:22px 0; border-top:1px solid var(--line); }
   .theme-item:first-child{ border-top:none; padding-top:0; }

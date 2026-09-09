@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;800;900&family=Caveat:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <script>
-(function(){try{var t=localStorage.getItem('theme');var l=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches;if((t||(l?'light':'dark'))==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
+(function(){try{if(localStorage.getItem('theme')==='light')document.documentElement.setAttribute('data-theme','light');}catch(e){}})();
 </script>
 <style>
   .nf{ min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:40px 20px; position:relative; overflow:hidden; }
