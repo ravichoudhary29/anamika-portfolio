@@ -160,6 +160,11 @@ git push
 
 Manual deploy: `npx vercel --prod`.
 
+`css/` and `js/` are served with `max-age=0, must-revalidate`, so an edit is
+live for everyone on their next load (revalidation returns a cheap `304` when
+nothing changed). Files under `assets/` are immutable and cached for a year —
+give a changed image a new filename, or it will stay cached.
+
 ### After moving to a custom domain
 
 Replace `anamika-yadav.vercel.app` in:
