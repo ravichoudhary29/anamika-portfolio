@@ -1,0 +1,12 @@
+{
+  "name": "anamika-yadav-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Portfolio site for Anamika Yadav — Product & UX Designer.",
+  "scripts": {
+    "dev": "npx serve public -l 3000",
+    "start": "npx serve public -l 3000"
+  },
+  "engines": { "node": ">=18" }
+}
