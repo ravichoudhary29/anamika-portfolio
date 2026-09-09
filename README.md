@@ -162,6 +162,6 @@ Manual deploy: `npx vercel --prod`.
 
 ### After moving to a custom domain
 
-Replace `anamika-portfolio.vercel.app` in:
+Replace `anamika-yadav.vercel.app` in:
 `public/index.html` (canonical + `og:`/`twitter:` tags + JSON-LD),
 `public/robots.txt`, and `public/sitemap.xml`.

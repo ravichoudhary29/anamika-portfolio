@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anamika-portfolio.vercel.app/sitemap.xml
+Sitemap: https://anamika-yadav.vercel.app/sitemap.xml

@@ -103,7 +103,7 @@ export default async function handler(req, res) {
           html: `
             <div style="font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:#17160F">
               <h2 style="margin:0 0 4px">New message from your portfolio</h2>
-              <p style="margin:0 0 18px;color:#6B675E;font-size:14px">Sent from anamika-portfolio.vercel.app</p>
+              <p style="margin:0 0 18px;color:#6B675E;font-size:14px">Sent from anamika-yadav.vercel.app</p>
               <p><strong>Name:</strong> ${escapeHtml(clean.name)}<br>
                  <strong>Email:</strong> <a href="mailto:${escapeHtml(clean.email)}">${escapeHtml(clean.email)}</a></p>
               <p style="white-space:pre-wrap;background:#F5F2EA;padding:16px;border-radius:8px">${escapeHtml(clean.message)}</p>
